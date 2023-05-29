@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+
+    <section class="gameContainer">
+      <!-- player input       -->
+      <label for="Player">Enter Player Names</label>
+      <div class="nameInputField">
+        <input id="PlayerName" type="text" />
+        <button id="submitNameButton">Submit</button>
+      </div>
+
+      <section class="playerList">
+        <!-- player name list -->
+        <h2 id="player1">player 1</h2>
+        <h2 id="player2">player 2</h2>
+      </section>
+
+      <!-- game structure below -->
+      <section class="row1">
+        <div class="a1 gameBox" value="A1"></div>
+        <div class="a2 gameBox" value="A2"></div>
+        <div class="a3 gameBox" value="A3"></div>
+      </section>
+      <section class="row2">
+        <div class="b1 gameBox" value="b4"></div>
+        <div class="b2 gameBox" value="b5"></div>
+        <div class="b3 gameBox" value="b6"></div>
+      </section>
+      <section class="row3">
+        <div class="c1 gameBox" value="c7"></div>
+        <div class="c2 gameBox" value="c8"></div>
+        <div class="c3 gameBox" value="c9"></div>
+      </section>
+      <h2 id="playerWinField"></h2>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
