@@ -1,5 +1,6 @@
 # GitRepository
 
-#Welcome to my gitRepository!
+Welcome to my gitRepository!
 
-# I am still learning but this is where i push all of my commits
+ 
+I am part of 100devs and this is where I push all of my commits
