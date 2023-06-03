@@ -39,3 +39,6 @@ function isValidWalk(walk) {
     ? true
     : false;
 }
+
+isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]); //should return true
+isValidWalk(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]); //should return false
