@@ -5,9 +5,6 @@
 html {
   background-color: rgb(249, 247, 246);
 }
-* {
-  /* outline: 1px solid red; */
-}
 
 main {
   /*setting max content width && keeping content center if max width is hit*/
@@ -60,10 +57,6 @@ main {
 }
 
 /* main content below */
-
-.landingPage * {
-  /* border: 1px solid red; */
-}
 
 .landingPage__searchForm__quoteWrapper__quoteText {
   /* set font styling for quote */
