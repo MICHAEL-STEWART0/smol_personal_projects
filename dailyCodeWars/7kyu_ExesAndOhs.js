@@ -16,7 +16,11 @@ function XO(str) {
   let xCount = 0;
   let oCount = 0;
   str.split("").forEach((el) => {
-    el.toLowerCase() === "x" ? xCount++ : oCount++; //if el is === x increment x count otherwise oCount
+    el.toLowerCase() === "x"
+      ? xCount++
+      : el.toLowerCase() === "o"
+      ? oCount++
+      : null; //if el is === x increment xcount otherwise check if o is a match and increment oCount, if neither are a match return null since the string is invalid. this is where error handling is appropriate.
   });
 
   return xCount === oCount; // are these 2 values equal? truthy or falsy
