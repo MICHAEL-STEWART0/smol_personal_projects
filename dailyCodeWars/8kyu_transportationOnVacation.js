@@ -14,3 +14,12 @@ Write a code that gives out the total amount for different days(d). */
 function rentalCarCost(d) {
   return d >= 7 ? d * 40 - 50 : d >= 3 ? d * 40 - 20 : d * 40;
 }
+
+//function calls for testing
+
+rentalCarCost(1); // expected 40,
+rentalCarCost(2); // expected 80,
+rentalCarCost(3); // expected 100,
+rentalCarCost(4); // expected 140,
+rentalCarCost(5); // expected 180,
+rentalCarCost(6); // expected 220,
