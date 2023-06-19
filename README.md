@@ -1,4 +1,4 @@
-# GitRepository
+# Welcome to my Github!
 
 An Austin, Texas based software engineer coding full-stack Javascript applications AND an experienced Corporate Facilitator for a large telecommunications company!
 🔭 I’m currently working on getting more familliar with the MERN stack!
