@@ -30,7 +30,7 @@ function getCharacters(obj, key, val) {
       return foundCharacters;
     }
     if (character[key].toLowerCase() === val.toLowerCase()) {
-      // if the given property value(case insensitive) is strict equal to the given value(also case insesative) push the character into the found characters arr
+      // if the given property value(case insensitive) is strict equal to the given value(also case insensitive) push the character into the found characters arr
       foundCharacters.push(character);
     }
   });
