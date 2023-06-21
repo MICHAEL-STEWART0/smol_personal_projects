@@ -34,9 +34,7 @@ The two arrays have the same size (> 0) given as parameter in function comp. */
 
 function comp(array1, array2) {
   //handle invalid inputs
-  if (array1 === null || array1 === [] || array2 === null || array2 === []) {
-    return false;
-  } else if (array1.length === 0 && array2.length === 0) {
+  if (array1.length === 0 && array2.length === 0) {
     return true;
   } else if (array1 === null && array2 === null) {
     return false;
