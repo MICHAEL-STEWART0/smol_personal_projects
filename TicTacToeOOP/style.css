@@ -69,17 +69,17 @@ main {
     font-size: 2rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 518px) {
   .gameName {
     font-size: 1.5rem;
   }
 }
-@media (max-height: 659px) {
+@media (max-height: 835px) {
   .gameName {
     font-size: 2rem;
   }
 } /* 768 1024 */
-@media (max-height: 427px) {
+@media (max-height: 578px) {
   .gameName {
     font-size: 1rem;
   }
