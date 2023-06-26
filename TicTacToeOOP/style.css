@@ -1,0 +1,86 @@
+/* FONT IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+
+/* remove me */
+* {
+  outline: 1px solid green;
+}
+/* ----------- */
+
+/* CSS VARIABLES */
+:root {
+  --mainFontFace: "Gasoek One", sans-serif;
+}
+/*  */
+body {
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+main {
+  margin: 0 auto;
+}
+
+.gameBoard--Grid-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 15vw);
+  grid-template-rows: repeat(4, 15vh);
+}
+
+.gameBoard--Grid-Container .first-cell {
+  grid-column: 1 / span 3;
+}
+.gameCell {
+  border: 1px solid green;
+  text-align: center;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--mainFontFace);
+}
+
+.gameName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--mainFontFace);
+  font-size: 3rem;
+}
+
+@media (max-width: 767px) {
+  .gameName {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .gameName {
+    font-size: 1.5rem;
+  }
+}
+@media (max-height: 659px) {
+  .gameName {
+    font-size: 2rem;
+  }
+} /* 768 1024 */
+@media (max-height: 427px) {
+  .gameName {
+    font-size: 1rem;
+  }
+}
