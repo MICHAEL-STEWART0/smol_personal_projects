@@ -34,7 +34,6 @@ function createGameBoard(gameRules, gameCells) {
       e.target.innerHTML = `${this.gameRules.currentPlayerLetter}`;
       this.gameRules.placedSuccesfully = true;
     } else {
-      alert(`cell not empty`);
       return;
     }
 
@@ -90,7 +89,6 @@ function createGameBoard(gameRules, gameCells) {
         ? (playerWinField.innerHTML = `X wins`)
         : (playerWinField.innerHTML = `O wins`);
     }
-    console.log(playerWinField.textContent);
   };
 }
 
