@@ -5,8 +5,7 @@
     <meta name="description" content="This is where your description goes" />
     <meta name="keywords" content="one, two, three" />
 
-    <title>Title in the tab</title>
-
+    <title>Find A Drink!</title>
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -18,13 +17,17 @@
         type="text"
         placeholder="Search For A Drink"
         aria-placeholder="Search For A Drink" />
-      <button type="button" id="userDrinkButton">Get Cocktail</button>
-      <button type="button" id="randomDrinkButton">Get random Cocktail</button>
+      <button id="userDrinkButton">Get Cocktail</button>
+      <button id="randomDrinkButton">Get random Cocktail</button>
     </div>
-    <h2>Drink Name</h2>
-    <img src="" alt="" />
+    <h2 id="drinkDisplayField">Drink Name</h2>
+    <img id="drinkImgDisplayField" src="" alt="" />
     <h3>Instructions</h3>
-
+    <section id="drinkInstructionsDisplayField">
+      <ul id="drinkIngredientList"></ul>
+      <p id="instructionsToMakeDrink"></p>
+    </section>
+    <!-- external javaScript links -->
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
