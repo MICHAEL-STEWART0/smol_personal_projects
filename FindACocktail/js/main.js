@@ -28,16 +28,6 @@ const displayFields = {
     this.updateDrinkInstructionField(closestMatchedDrink);
   },
 
-  updateFieldsWithRandomChoice(closestMatchedDrink) {
-    this.resetErrorStyling();
-    this.updateDrinkNameField(closestMatchedDrink);
-    this.updateDrinkImageField(closestMatchedDrink);
-    this.clearIngredientListItems();
-    this.clearInstructionField();
-    this.updateDrinkIngredientField(closestMatchedDrink);
-    this.updateDrinkInstructionField(closestMatchedDrink);
-  },
-
   updateDrinkNameField(closestMatchedDrink) {
     this.drinkNameDisplayField.textContent = closestMatchedDrink.strDrink;
   },
@@ -126,9 +116,8 @@ async function fetchDrink(userGeneratedEvent) {
     displayFields.updateFieldsWithUserChoice(closestMatchedDrink);
   } else {
     //do something with random drink
-    console.log(`random choice`, drinks);
     const randomDrink = drinks[getRandomNumber(0, drinks.length - 1)];
-    displayFields.updateFieldsWithRandomChoice(randomDrink);
+    displayFields.updateFieldsWithUserChoice(randomDrink);
   }
 }
 
