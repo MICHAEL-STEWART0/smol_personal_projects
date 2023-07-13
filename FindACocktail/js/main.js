@@ -28,14 +28,16 @@ const displayFields = {
     this.updateInstructions(data); //set instruction list items
   },
 
-  updateFieldWithRandomResult(data) {
-    let drink = data.drinks[getRandomNumber(0, 24)];
-    this.drinkNameDisplayField.textContent = drink.strDrink;
-    this.imageDisplayField.setAttribute("src", `${drink.strDrinkThumb}`);
+  updateFieldWithRandomResult(arrOfDrinks) {
+    let randomDrink = arrOfDrinks[getRandomNumber(0, arrOfDrinks.length - 1)];
+    console.log(randomDrink);
+    this.drinkNameDisplayField.textContent = randomDrink.strDrink;
+    this.imageDisplayField.setAttribute("src", `${randomDrink.strDrinkThumb}`);
     this.imageDisplayField.setAttribute(
       `alt`,
-      `A picture of a ${drink.strDrink}`
+      `A picture of a ${randomDrink.strDrink}`
     );
+    this.updateInstructions(data); //set instruction list items
   },
 
   resetStyling() {
@@ -85,44 +87,34 @@ const inputFields = {
 
 displayFields.startEventListners();
 
-function fetchDrink(userGeneratedEvent) {
-  const choice = inputFields.drinkSearchField.value;
+async function fetchDrink(userGeneratedEvent) {
+  const userChoice = inputFields.drinkSearchField.value;
   const url =
-    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + choice;
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userChoice;
+
+  const response = await fetch(url);
+  const data = await response.json();
+  const arrOfDrinks = data.drinks;
 
   if (
     userGeneratedEvent === "userDrinkButton" ||
     userGeneratedEvent === "Enter"
   ) {
-    fetch(url)
-      .then((res) => res.json()) // parse response as JSON
-      .then((data) => {
-        /* if the search field is empty or the resonse 
+    /* if the search field is empty or the resonse 
         has no drink update field with no result */
-        if (inputFields.drinkSearchField.value === "" || data.drinks === null) {
-          displayFields.updateFieldWithNoResult();
-          displayFields.clearListItems();
-          return;
-        } else if (data.drinks !== null) {
-          /* if there is a present drink reset 
+    if (userChoice === "" || arrOfDrinks === null) {
+      displayFields.updateFieldWithNoResult();
+      displayFields.clearListItems();
+      return;
+    } else if (arrOfDrinks !== null) {
+      /* if there is a present drink reset 
           styling to from previous errors */
-          displayFields.resetStyling();
-        }
-        displayFields.updateFieldWithResult(data);
-      })
-      .catch((err) => {
-        alert(`error ${err}`);
-      });
+      displayFields.resetStyling();
+    }
+    displayFields.updateFieldWithResult(data);
   } else {
-    fetch(url)
-      .then((res) => res.json()) // parse response as JSON
-      .then((data) => {
-        displayFields.resetStyling();
-        displayFields.updateFieldWithRandomResult(data);
-      })
-      .catch((err) => {
-        alert(`${err}`);
-      });
+    displayFields.resetStyling();
+    displayFields.updateFieldWithRandomResult(arrOfDrinks);
   }
 }
 
