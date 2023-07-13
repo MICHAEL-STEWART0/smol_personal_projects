@@ -4,15 +4,19 @@
 
 /* Box Model Hack */
 * {
+  /* list-style-type: none; */
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-img {
+#drinkImgDisplayField {
   display: block;
   margin: 0 auto;
+  width: 20vw;
 }
 
 /******************************************
@@ -23,4 +27,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+h3 {
+  padding: 2rem 0;
+}
+
+ol {
+  margin-bottom: 2rem;
+}
+
+#drinkInstructionsDisplayField {
+  text-align: center;
+}
+
+#instructionsToMakeDrink {
+  max-width: 50vw;
 }
