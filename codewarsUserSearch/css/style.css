@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  min-width: 80vw;
+  min-height: 80vh;
+  outline: 3px solid green;
+  border-top-right-radius: 40px;
+  padding: 40px 0px;
+  display: flex;
+}
+
+#ancillaryUserInfo {
+  /* outline: 5px solid black; */
+  flex: 1;
+  max-width: 200px;
+  min-width: 100px;
+}
+#primaryUserInfo {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  /* outline: 4px solid yellow; */
+}
+#primaryUserInfo--userSearchField {
+  outline: 4px solid red;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#primaryUserInfo--userCardDisplayField {
+  outline: 4px solid black;
+  flex: 1;
+}
