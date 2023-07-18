@@ -10,47 +10,56 @@
   </head>
   <body>
     <main>
-      <section id="ancillaryUserInfo">
-        <section class="ancillaryUserInfo--completedKatas">
-          <h2 class="category--title">Completed Katas</h2>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-          </ul>
+      <section id="mainApp">
+        <section id="ancillaryUserInfo">
+          <section class="ancillaryUserInfo--completedKatas">
+            <h2 class="completed-Katas">Completed Katas</h2>
+            <span id="ancillaryUserInfo--totalCompletedKatas"></span>
+          </section>
         </section>
-      </section>
-      <section id="primaryUserInfo">
-        <section id="primaryUserInfo--userSearchField">
-          <img
-            id="codeWarsUserSearchLogo"
-            src="/codewarsUserSearch/assets/codewars-search-logo.png"
-            alt="" />
-          <input
-            type="search"
-            name="userSearch"
-            id="userSearchBox"
-            placeholder="User Search" />
-        </section>
-        <section id="primaryUserInfo--userCardDisplayField">
-          <div class="userCard">
-            <div class="userDescriptors">
-              <div class="userCard--UserDescriptors--rankNameClanContainer">
-                <div class="userCard--UserDescriptors--rankName"></div>
-                <div class="userCard--UserDescriptors--clan"></div>
+        <section id="primaryUserInfo">
+          <section id="primaryUserInfo--userSearchField">
+            <img
+              id="codeWarsUserSearchLogo"
+              src="/codewarsUserSearch/assets/codewars-search-logo.png"
+              alt="pictureOfCodeWarsLogo" />
+            <input
+              type="search"
+              name="userSearch"
+              id="userSearchBox"
+              placeholder="User Search - (case sensitive)" />
+            <span id="userNotFoundField"></span>
+          </section>
+          <section id="primaryUserInfo--userCardDisplayField">
+            <div class="userCard">
+              <div class="userDescriptors">
+                <div class="userCard--UserDescriptors--Container">
+                  <div class="userCard--UserDescriptors--rankName--container">
+                    <span
+                      id="userCard--userRank"
+                      class="userCard--identifierSeperator"
+                      >rank </span
+                    ><span
+                      id="userCard--userName"
+                      class="userCard--identifierSeperator"
+                      >userName</span
+                    >
+                    <span id="userCard--leaderBoardRank">lbr#</span>
+                  </div>
+                  <div
+                    id="userCard--UserDescriptors--clan"
+                    class="userCard--rule--seperator">
+                    clan
+                  </div>
+                  <div id="userCard--UserDescriptors--profileLink">url</div>
+                </div>
               </div>
-              <div class="userCard--userDescriptors--userProfileURL"></div>
-              <div class="userCard--userDescriptors--leaderboardRank"></div>
+              <div class="userCard--usedProgrammingLanguages--Container">
+                <h3 id="usedProgrammingLanguages--Header">languages used</h3>
+                <ul id="usedProgrammingLanguages"></ul>
+              </div>
             </div>
-            <div class="userCard--usedProgrammingLanguages"></div>
-          </div>
+          </section>
         </section>
       </section>
     </main>
