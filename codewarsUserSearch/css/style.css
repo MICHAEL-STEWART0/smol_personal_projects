@@ -3,10 +3,15 @@
   box-sizing: border-box;
   font-family: var(--cw-primary-font-family-sans-serif);
 }
+a,
+a:visited {
+  color: rgb(185, 185, 247);
+}
 
 :root {
   --cw-primary--gray: rgb(42, 42, 42);
   --cw-primary-font-white: rgb(255, 255, 255);
+  --cw-primary-header-size: clamp(2rem, 2.5vw, 3rem);
   --cw-primary-font-family-sans-serif: "Aboreto", cursive;
 }
 body {
@@ -17,7 +22,7 @@ body {
   background-color: black;
 }
 
-main {
+#mainApp {
   background-color: var(--cw-primary--gray);
   min-width: 80vw;
   min-height: 80vh;
@@ -60,12 +65,8 @@ main {
   max-height: 300px;
 }
 
-#primaryUserInfo--userCardDisplayField {
-  border-bottom: 4px solid white;
-  flex: 1;
-}
-
 #userSearchBox {
+  font-family: Arial, Helvetica, sans-serif !important;
   border-radius: 14px;
   height: 20%;
   width: 50%;
@@ -87,9 +88,73 @@ main {
   align-items: center;
 }
 
-.category--title {
+.completed-Katas {
   color: var(--cw-primary-font-white);
   margin: 10px 0;
   font-size: 14px;
   border-bottom: 2px solid white;
 }
+
+#primaryUserInfo--userCardDisplayField {
+  border-bottom: 4px solid white;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userCard {
+  visibility: hidden;
+  border: 3px solid white;
+  border-radius: 10px;
+  height: 80%;
+  min-height: 100px;
+  width: 80%;
+  max-width: 443px;
+  color: var(--cw-primary-font-white);
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.userCard--UserDescriptors--Container {
+  padding: 5px;
+  border-bottom: 3px solid white;
+}
+
+.userCard--UserDescriptors--rankName--container {
+  display: inline-block;
+}
+
+.userCard--identifierSeperator {
+  border-right: 1px solid white;
+  padding: 0 10px 0 0;
+}
+
+#usedProgrammingLanguages {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#userCard--userName {
+  padding-left: 10px;
+}
+#usedProgrammingLanguages--Header {
+  font-size: 14px;
+  padding: 5px;
+}
+#userNotFoundField {
+  color: red;
+  text-align: center;
+  font-size: var(--cw-primary-header-size);
+  display: block;
+}
+
+#ancillaryUserInfo--totalCompletedKatas {
+  color: var(--cw-primary-font-white);
+  font-size: var(--cw-primary-header-size);
+}
+
+#usedProgrammingLanguages {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* add media query to resize completed katas # && user badge */
