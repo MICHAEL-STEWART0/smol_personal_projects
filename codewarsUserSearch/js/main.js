@@ -100,7 +100,7 @@ const displayFields = {
 };
 
 const assetSources = {
-  logoSrc: `/codewarsUserSearch/assets/codewars-search-logo.png`,
+  logoSrc: `assets/codewars-search-logo.png`,
 };
 
 displayFields.userSearchBox.addEventListener("keydown", function (e) {
