@@ -1,0 +1,17 @@
+:root {
+  --primary-calc-backdrop-color: rgb(227, 222, 217);
+  --secondary-calc-buttonBackdrop-color: rgb(206, 191, 182);
+  --calc-displayField-primary-color: rgb(191, 191, 162);
+}
+
+.calculatorApp--container {
+  margin-top: 20vh;
+  display: flex;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: var(--primary-calc-backdrop-color);
+}
