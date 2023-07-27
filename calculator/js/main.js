@@ -29,7 +29,9 @@ for (let button in buttons) {
   }
 }
 
-// need to handle multiple operators, every time an operator is used add it to a queue and use it then remove it from the array
+// need to handle multiple operators, every time an operator is used add it to a queue and use it then remove it from the array 
+
+// handle operator conversion using an iife Function() or eval() --note eval not recommended. better to use a function constructor and pass the body of the function and immediately invoke it to recieve a value
 
 // Function(`return ${document.querySelector('.calculator-userEnteredData--displayField').innerHTML})()
 
