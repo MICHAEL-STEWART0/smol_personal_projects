@@ -27,6 +27,9 @@ class Calculator {
           return "Please enter a valid expression";
         }
       },
+      invertValue(n) {
+        return n * -1;
+      },
     };
 
     this.updateFields = {
@@ -54,7 +57,23 @@ for (let button in calculator.buttons) {
   if (calculator.buttons[button].length !== undefined) {
     calculator.buttons[button].forEach((el) =>
       el.addEventListener("click", function (e) {
-        calculator.updateFields.updateUserEnteredDataField(e.target.innerHTML);
+        console.log();
+        if (
+          !!e.target.attributes.id &&
+          e.target.attributes.id.textContent === "invertNum"
+        ) {
+          calculator.updateFields.updateResultField(
+            String(
+              calculator.operate.invertValue(
+                Number(calculator.displayFields.resultField.textContent)
+              )
+            )
+          );
+        } else {
+          calculator.updateFields.updateUserEnteredDataField(
+            e.target.innerHTML
+          );
+        }
       })
     );
   } else {
