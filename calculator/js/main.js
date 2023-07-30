@@ -18,17 +18,31 @@ class Calculator {
 
     this.operate = {
       getValues: () => {
-        let regex = /[+\-*/%]/g; //regex for spliting numbers based on operators
-        return [
-          this.displayFields.userEnteredDataField.innerHTML
-            .split(regex)
-            .map((n) => Number(n)),
-          this.displayFields.userEnteredDataField.innerHTML
-            .split("")
-            .filter((el) => !`1234567890`.includes(el)),
-        ];
+        return this.displayFields.userEnteredDataField.innerHTML;
       },
-      add(...n) {},
+      calculate(expression) {
+        if (expression !== undefined) {
+          return eval(expression);
+        } else {
+          return "Please enter a valid expression";
+        }
+      },
+    };
+
+    this.updateFields = {
+      updateUserEnteredDataField: (data) => {
+        this.displayFields.userEnteredDataField.textContent += data;
+      },
+      updateResultField: (data = 0) => {
+        this.displayFields.resultField.textContent = data;
+      },
+      clearDisplayfields: () => {
+        this.displayFields.userEnteredDataField.textContent = "";
+        this.displayFields.resultField.textContent = "0";
+      },
+      deleteLastInput: () => {
+        return this.userEnteredDataField;
+      },
     };
   }
 }
@@ -40,20 +54,18 @@ for (let button in calculator.buttons) {
   if (calculator.buttons[button].length !== undefined) {
     calculator.buttons[button].forEach((el) =>
       el.addEventListener("click", function (e) {
-        console.log(e.target.innerHTML); //TODO: pass target into function that handles data
+        calculator.updateFields.updateUserEnteredDataField(e.target.innerHTML);
       })
     );
   } else {
     calculator.buttons[button].addEventListener("click", function (e) {
-      console.log(e.target.innerHTML); //TODO: pass target into function that handles data
+      if (e.target.attributes.id.textContent === "clearButton") {
+        calculator.updateFields.clearDisplayfields();
+      } else if (e.target.attributes.id.textContent === "equalButton") {
+        calculator.updateFields.updateResultField(
+          calculator.operate.calculate(calculator.operate.getValues())
+        );
+      }
     });
   }
 }
-
-// need to handle multiple operators, every time an operator is used add it to a queue and use it then remove it from the array
-
-// handle operator conversion using an iife Function() or eval() --note eval not recommended. better to use a function constructor and pass the body of the function and immediately invoke it to recieve a value
-
-// Function(`return ${document.querySelector('.calculator-userEnteredData--displayField').innerHTML})()
-
-// permited values[0,1,2,3,4,5,6,8,9]
