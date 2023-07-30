@@ -3,6 +3,7 @@
 
 :root {
   /* calculator body colors */
+  --page-body-background-color: rgb(242, 206, 166);
   --primary-calc-backdrop-color: rgb(227, 222, 217);
   --calc-primaryButtonBackdrop-color: rgb(206, 191, 182);
   --calc-displayField-primary-color: rgb(191, 191, 162);
@@ -43,7 +44,9 @@
   justify-content: center;
   align-items: center;
 }
-
+body {
+  background-color: var(--page-body-background-color);
+}
 .calculator {
   background-color: var(--primary-calc-backdrop-color);
   border-radius: 20px;

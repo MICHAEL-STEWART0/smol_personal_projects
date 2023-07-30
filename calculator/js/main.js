@@ -44,7 +44,11 @@ class Calculator {
         this.displayFields.resultField.textContent = "0";
       },
       deleteLastInput: () => {
-        return this.userEnteredDataField;
+        let arrOfChars =
+          this.displayFields.userEnteredDataField.textContent.split("");
+        this.displayFields.userEnteredDataField.textContent = "";
+        arrOfChars.pop();
+        this.updateFields.updateUserEnteredDataField(arrOfChars.join(""));
       },
     };
   }
@@ -57,7 +61,6 @@ for (let button in calculator.buttons) {
   if (calculator.buttons[button].length !== undefined) {
     calculator.buttons[button].forEach((el) =>
       el.addEventListener("click", function (e) {
-        console.log();
         if (
           !!e.target.attributes.id &&
           e.target.attributes.id.textContent === "invertNum"
@@ -69,6 +72,11 @@ for (let button in calculator.buttons) {
               )
             )
           );
+        } else if (
+          !!e.target.attributes.id &&
+          e.target.attributes.id.textContent === "del"
+        ) {
+          calculator.updateFields.deleteLastInput();
         } else {
           calculator.updateFields.updateUserEnteredDataField(
             e.target.innerHTML
