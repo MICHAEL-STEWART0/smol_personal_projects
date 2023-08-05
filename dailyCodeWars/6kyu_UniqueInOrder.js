@@ -9,9 +9,5 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 //solution
 
 var uniqueInOrder = function (iterable) {
-  if (typeof iterable === `string`) {
-    iterable = iterable.split("");
-  }
-
-  return iterable.filter((_, index, arr) => arr[index] !== arr[index + 1]);
+  return Array.from(iterable).filter((_, i, arr) => arr[i] !== arr[i + 1]);
 };
