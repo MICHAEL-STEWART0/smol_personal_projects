@@ -80,7 +80,7 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    for (int i = 0; i < candidate_count; i++) // bubble sort
+    for (int i = 0; i < candidate_count; i++) // bubble sort descending so i dont have to do a reverse traversal 
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
