@@ -63,7 +63,7 @@ def handle_guess() -> None:
 
 bot_num = get_random_num([1,100])
 
-rules:str = r"C:\Users\micha\Documents\fdesktop\python_projects\guessingGame\rules.txt" #path to rules
+rules:str = "rules.txt" #path to rules
 
 generate_rules(rules)
 
