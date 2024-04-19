@@ -9,8 +9,6 @@
 # farther from the number than the previous guess, return "COLDER!"
 # When the player's guess equals the number, tell them they've guessed correctly and how many guesses it took!
 
-
-
 # Write a program that picks a random integer from 1 to 100, and has players guess the number.'
 
 def  get_random_num(_range:list) -> int: #generate random int from given range in a list.
@@ -26,6 +24,7 @@ def generate_rules(path_to_file:str) -> None:
             print(f.read())
     except:
         print("file unable to be opened")
+        
 def get_user_guess() -> int:
     user_guess = input("Give me a number between 1 - 100 \n")
     while type(user_guess) == str:

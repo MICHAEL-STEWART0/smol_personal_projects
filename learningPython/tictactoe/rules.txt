@@ -1,0 +1,7 @@
+Welcome to Tic Tac Toe!
+The rules are simple.
+You will be asked for your guess, it will need to be in x,y format ie 0,1 1,1 or 2,2
+You can not exceed 2,2 (guesses are 0 indexed.) meaning there are 3 values per coordinate [0-2,0-2] in that format.
+Anything out of that range and you will be asked to reinput your choice.
+The board will be printed each turn so you can see the most up to date game board.
+Have fun and may the best person win!

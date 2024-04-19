@@ -1,8 +1,0 @@
-Welcome to the guessing game. In this game there are a couple of rules.
-There is a bot that will choose a number at you have to guess what it is. 
-The range is from 1-100 inclusive.
-You will be asked to guess a number, if it is not within the permitted range, you will see "OUT OF BOUNDS".
-On your first turn  if your  guess is within 10 of the target num you will see "warm".
-if it is furter than 10 away from the number, you will see "cold".
-on all other turns if a guess is closer to the number than the previous guess you will see warmer, or colder.
-when your guess the number correctly I will let you know that youve guessed correctly, and how many tries it took you.
