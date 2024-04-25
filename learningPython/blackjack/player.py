@@ -1,15 +1,19 @@
-
 class Player:
+    '''
+    methods(player_action,bet,deposit_in_to_wallet)
+    props(self.count,self.wallet)
+    '''
     def __init__(self) -> None:
         self.count = 0
+        self.wallet = 0
         self.wallet = self.deposit_in_to_wallet()
 
-    def player_action(self):
+    def hit_or_stay(self):
         '''
         This allows the player to hit or stay.
         '''
         while True:
-            player_action = input("What action would you like to take? Hit Or Stay? \n").lower().trim()
+            player_action = input("What action would you like to take? Hit Or Stay? \n").lower().strip()
             if player_action == "hit" or player_action == "stay":
                 return player_action
             else: 
@@ -35,6 +39,6 @@ class Player:
             player_deposit = input("How much would you like to deposit? \n")
             try:
                 player_deposit = int(player_deposit)   
-                self.wallet = player_deposit 
+                return player_deposit 
             except ValueError:
                 print("There was an error trying to deposit your monies into your wallet, Please try again.")
